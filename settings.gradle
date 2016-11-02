@@ -1,0 +1,4 @@
+rootProject.name = 'java-practice-cc'
+include 'java-practice-cc-dagger'
+findProject(':java-practice-cc-dagger')?.name = 'java-practice'
+
