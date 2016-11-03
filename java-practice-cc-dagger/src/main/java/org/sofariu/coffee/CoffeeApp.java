@@ -1,15 +1,13 @@
 package org.sofariu.coffee;
 
 import dagger.Component;
-import org.sofariu.coffee.DaggerCoffeeApp_Coffee.Builder;
 
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class CoffeeApp {
 
-    @Component(modules={CoffeeModule.class})
-    public interface Coffee {
+    @Component(modules = {CoffeeModule.class})
+    interface Coffee {
         CoffeeMaker maker();
     }
 
@@ -18,5 +16,10 @@ public class CoffeeApp {
     void brewCoffee() {
         Coffee coffee = coffeeSupplier.get();
         coffee.maker().makeCoffee();
+    }
+
+    public static void main(String[] args) {
+        CoffeeApp coffeeApp = new CoffeeApp();
+       coffeeApp.brewCoffee();
     }
 }

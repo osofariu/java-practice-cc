@@ -18,13 +18,13 @@ public class CoffeeMakerTest {
     CoffeeMaker coffeeMaker;
 
     @Mock
-    PumpImpl pump;
+    Pump pump;
 
     @Mock
-    HeaterImpl heater;
+    ElectricHeater heater;
 
     @Mock
-    ThermostatImpl thermostat;
+    ThermostatDevice thermostat;
 
     @Before
     public void setUp() {

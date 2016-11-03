@@ -1,12 +1,14 @@
 package org.sofariu.coffee;
 
+import javax.inject.Inject;
 import java.util.function.Consumer;
 
-public class HeaterImpl implements Heater {
+public class ElectricHeater implements Heater {
 
-    ThermostatImpl thermostat;
+    ThermostatDevice thermostat;
 
-    HeaterImpl(ThermostatImpl t) {
+    @Inject
+    public ElectricHeater(ThermostatDevice t) {
         thermostat = t;
     }
 

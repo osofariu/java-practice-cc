@@ -4,8 +4,8 @@ import javax.inject.Inject;
 
 class CoffeeMaker {
 
-    Pump pump;
-    Heater heater;
+    private Pump pump;
+    private Heater heater;
 
     @Inject
     CoffeeMaker(Pump pump, Heater heater) {
